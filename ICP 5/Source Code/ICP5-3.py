@@ -19,12 +19,13 @@ print("R^2 value is: ", model.score(X_test, y_test))
 predictions = model.predict(X_test)
 print("RMSE value is: ", mean_squared_error(y_test, predictions))
 
+# Finding the top 5 correlated features  to the target label
 n_features = restaurant_values.select_dtypes(include=[np.number])
 corr = n_features.corr()
 print('The top 5 correlated features are \n')
 print(corr['revenue'].sort_values(ascending=False)[:5], '\n')
 
-
+# Finding RMSE abd R2 with the top 5 values
 x = restaurant_values[['revenue', 'P2', 'P28', 'P6', 'P21']]
 y = restaurant_values["revenue"].astype(str)
 X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=42, test_size=.33)
