@@ -1,5 +1,5 @@
-# PythonClassLab
-Name (Student): Divyanshi Kothari
+# Python Programs
 
 
-GitHub Link: https://github.com/divyanshikgit/PythonClassLab
+
+
